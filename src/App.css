@@ -30,7 +30,7 @@ body {
   width: 100%;
 }
 
-/* Header - centered both horizontally and vertically */
+/* Header - fixed at top */
 header {
   width: 100%;
   padding: 40px 20px;
@@ -41,6 +41,7 @@ header {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
+  flex-shrink: 0;
 }
 
 header h1 {
@@ -65,7 +66,7 @@ main > * {
   width: 100%;
 }
 
-/* Footer - centered and pushed to bottom */
+/* Footer - fixed at bottom */
 footer {
   width: 100%;
   padding: 30px 20px;
@@ -76,8 +77,8 @@ footer {
   background-color: #242323;
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
   margin-top: auto;
-  border-start-end-radius: 25px;
-  border-start-start-radius: 25px;
+  border-radius: 25px 25px 0 0;
+  flex-shrink: 0;
 }
 
 footer p {
@@ -144,7 +145,88 @@ footer p {
   transition: max-height 0.3s ease, opacity 0.3s ease;
 }
 
+.tabs {
+  width: 100%;
+  margin-top: 20px;
+  padding: 0 20px;
+}
 
+.tabs .tab-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.tab-buttons .tab-btn {
+  background-color: #388ca1;
+  border: 2px solid transparent;
+  color: #dff5fa;
+  font-size: 1rem;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.tab-buttons .tab-btn:hover {
+  background-color: #2a6b81;
+  border-color: #0dedf5;
+  box-shadow: 0 2px 8px rgba(13, 237, 245, 0.3);
+}
+
+.tab-buttons .tab-btn.active {
+  background-color: #0dedf5;
+  color: #161616;
+  border-color: #0dedf5;
+  box-shadow: 0 4px 15px rgba(13, 237, 245, 0.5), 0 0 20px rgba(13, 237, 245, 0.3);
+}
+
+.tab-item {
+  display: inline-block;
+}
+
+.tab-item ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tab-item li {
+  display: inline-block;
+}
+
+.tab-item button {
+  background-color: #388ca1;
+  border: 2px solid transparent;
+  color: #dff5fa;
+  font-size: 1rem;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.tab-item button:hover {
+  background-color: #2a6b81;
+  border-color: #0dedf5;
+  box-shadow: 0 2px 8px rgba(13, 237, 245, 0.3);
+}
+
+.tab-item button.active {
+  background-color: #0dedf5;
+  color: #161616;
+}
+
+.tabs p {
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #54939e;
+  color: #6bd1f0;
+  margin-top: 15px;
+}
 
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
