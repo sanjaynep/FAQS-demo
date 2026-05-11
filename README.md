@@ -10,12 +10,6 @@ This project emphasizes clean React components with styling in CSS and is ideal 
 - Responsive design with CSS
 - Easy-to-customize structure
 
-## Tech Stack
-
-- **CSS**: ~52%
-- **JavaScript (React)**: ~44%
-- **HTML**: ~5%
-
 ## Getting Started
 
 ### Prerequisites
